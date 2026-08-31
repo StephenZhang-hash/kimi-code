@@ -1,5 +1,19 @@
 # @moonshot-ai/kimi-code
 
+## 0.39.2
+
+### Patch Changes
+
+- [#3348](https://github.com/MoonshotAI/kimi-code/pull/3348) [`9d2304c`](https://github.com/MoonshotAI/kimi-code/commit/9d2304c23ca30c781b1a39540971dcaef085a500) Thanks [@liukx0205](https://github.com/liukx0205)! - Fix models and providers transiently disappearing when config.toml is saved non-atomically by an external editor while the daemon reloads it.
+
+- [#3377](https://github.com/MoonshotAI/kimi-code/pull/3377) [`58b74cf`](https://github.com/MoonshotAI/kimi-code/commit/58b74cfeab157483eef8a9e4ed8f4b683eecb34d) Thanks [@chengluyu](https://github.com/chengluyu)! - Fix duplicate user messages in transcript clients.
+
+- [#3371](https://github.com/MoonshotAI/kimi-code/pull/3371) [`9e88152`](https://github.com/MoonshotAI/kimi-code/commit/9e881528a89945a373002b0b229f91735e8f2c4f) Thanks [@tpoisonooo](https://github.com/tpoisonooo)! - Fix prompts remaining queued forever after reopening a session.
+
+- [#3346](https://github.com/MoonshotAI/kimi-code/pull/3346) [`ece9618`](https://github.com/MoonshotAI/kimi-code/commit/ece96185e93742db4771de83147f709f22ca6130) Thanks [@tpoisonooo](https://github.com/tpoisonooo)! - Tower mode (experimental, `KIMI_CODE_EXPERIMENTAL_TOWER=1`): spawned workers now start from the base checkout's uncommitted changes instead of missing them, and TowerMerge refuses to merge while the checkout still holds those changes uncommitted. Also, a new session can now enter tower mode after the previous owning session stopped without exiting, instead of being refused while that session stays open. Tower mode now stays on after tower teardown; turn it off explicitly with /tower off. Tower mode is now mutually exclusive with plan mode and swarm mode: entering any one of them exits the others.
+
+- [#3366](https://github.com/MoonshotAI/kimi-code/pull/3366) [`9619277`](https://github.com/MoonshotAI/kimi-code/commit/961927739ef34819d67d76fa5870cbe4ba7a01ff) Thanks [@kimi-agent-bot](https://github.com/kimi-agent-bot)! - Use the Unicode ellipsis "…" in user-facing TUI and VS Code webview text.
+
 ## 0.39.1
 
 ### Patch Changes
